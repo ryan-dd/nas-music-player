@@ -1,4 +1,4 @@
-const { rules } = require('./webpack.rules');
+const { rules } = require('./webpack.renderer.rules');
 const { plugins } = require('./webpack.plugins');
 
 rules.push({
@@ -7,6 +7,7 @@ rules.push({
 });
 
 module.exports = {
+  mode: 'development',
   module: {
     rules,
   },
@@ -15,4 +16,12 @@ module.exports = {
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
   },
   target: 'electron-renderer',
+  output: {
+    libraryTarget: 'umd',
+    globalObject: 'this',
+  },
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
 };

@@ -1,6 +1,6 @@
 module.exports = {
   rules: [
-    // Add support for native node modules
+    // Add support for native node modules (only for main process)
     {
       test: /native_modules[/\\].+\.node$/,
       use: 'node-loader',

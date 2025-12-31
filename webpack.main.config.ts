@@ -17,6 +17,11 @@ const mainConfig: Configuration = {
   resolve: {
     extensions: ['.js', '.ts', '.jsx', '.tsx', '.css', '.json'],
   },
+  target: 'electron-main',
+  node: {
+    __dirname: false,
+    __filename: false,
+  },
 };
 
 export { mainConfig };
