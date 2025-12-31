@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.webpack/
+*.log
+.DS_Store
+*.d.ts
+*.js.map
